@@ -4,12 +4,13 @@
 @import 'social';
 @import 'aside';
 @import 'footer';
+@import 'clanek-page';
 
 // homepage
 .main{
    &__inner{
       display: flex;
-      margin-bottom: 48px;
+      margin-bottom: 12px;
    }
    &__content{
       flex: 0 0 68.2%;

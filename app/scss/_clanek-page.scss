@@ -1,0 +1,30 @@
+
+.clanek-page{
+   &__infobox{
+      border-bottom: 1px solid $red;
+      padding-bottom: 4px;
+      margin-bottom: 32px;
+      span{
+         font-size: 0.875rem;
+         color: $red;
+         margin-bottom: 17px;
+         display: block;
+      }
+   }
+   &__content{
+      padding: 0 32px;
+      p{
+         margin-bottom: 28px;
+      }
+      img{
+         width: 100%;
+         background-size: cover;
+         display: block;
+      }
+   }
+}
+@media(max-width:600px){
+   .clanek-page__content{
+      padding: 0 10px;
+   }
+}

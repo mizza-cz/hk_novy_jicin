@@ -1,6 +1,9 @@
 .aside{
    max-width: 31.8%;
    flex: 0 0 31.8%;
+   .clanek+.clanek{
+      margin-top: 8px;
+   }
    h3{
       color: $blue;
       padding-left: 17px;
@@ -19,6 +22,7 @@
    }
   &__tabbox{
    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+   margin-bottom: 32px;
   }
    &__tabs{
      
