@@ -1,7 +1,25 @@
 .aside{
    max-width: 31.8%;
    flex: 0 0 31.8%;
+   h3{
+      color: $blue;
+      padding-left: 17px;
+      position: relative;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      &::before{
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 6px;
+         width: 1px;
+         height: 11px;
+         background-color: $red;
+      }
+   }
+  &__tabbox{
    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  }
    &__tabs{
      
       display: flex;
@@ -58,4 +76,30 @@
    bottom: 0;
    display: block;
    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -21%, #ffffff);
+}
+.aside__menu{
+   background-color: $blue;
+   padding: 32px 32px 16px 32px;
+   a{
+      color: #fff;
+      text-transform: uppercase;
+      padding-left: 17px;
+      position: relative;
+      border-bottom: 1px solid $red;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      width: 100%;
+      &::before{
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 6px;
+         width: 1px;
+         height: 11px;
+         background-color: $red;
+      }
+      &.active{
+         color: $red;
+      }
+   }
 }

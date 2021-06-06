@@ -124,3 +124,52 @@ p{
 .win{
    color:  $green;
 }
+.static{
+   margin-top: 50px;
+   h1{
+      color:$blue;
+      margin-bottom: 17px;
+      text-transform: uppercase;
+   }
+   p{
+      margin-bottom: 28px;
+   }
+   img{
+      width: 100%;
+      background-size: cover;
+      display: block;
+   }
+}
+.social-content{
+   margin-top: 41px;
+   display: flex;
+   a+a{
+      margin-left: 16px;
+   }
+   a{
+      display: block;
+      padding: 8px 24px 9px 56px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: $blue;
+      position: relative;
+      &::before{
+         content: '' ;
+         position: absolute;
+         left: 24px;
+         top: 5px;
+         width: 24px;
+         height: 24px;
+      }
+   }
+   &__twitter{
+      &::before{
+         background-image: url('../images/svg/twitter-mob.svg');
+      }
+   }
+   &__facebook{
+      &::before{
+         background-image: url('../images/svg/facebook-mob.svg');
+      }
+   }
+}

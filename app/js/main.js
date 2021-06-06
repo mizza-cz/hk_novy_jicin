@@ -1,9 +1,9 @@
 $(function(){
     // tabs team
-  $('.aside .aside__tab').on('click', function (event) {
+  $('.aside__tabbox .aside__tab').on('click', function (event) {
    var id = $(this).attr('data-id');
-   $('.aside').find('.aside__tab-content').removeClass('tab-active').hide();
-   $('.aside .aside__tabs').find('.aside__tab').removeClass('link');
+   $('.aside__tabbox').find('.aside__tab-content').removeClass('tab-active').hide();
+   $('.aside__tabbox .aside__tabs').find('.aside__tab').removeClass('link');
    $(this).addClass('link');
    $('#' + id)
      .addClass('tab-active')
