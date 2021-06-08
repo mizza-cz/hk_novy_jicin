@@ -39,6 +39,11 @@ $(function(){
    $(this).closest('.navigation__list').toggleClass('active');
  });
 });
+//// scroll
+window.addEventListener('scroll', function () {
+  var header = document.querySelector('.header__inner');
+  header.classList.toggle('sticky', window.scrollY > 105);
+});
 const menuBtn = document.querySelector('.navbar__menu');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
