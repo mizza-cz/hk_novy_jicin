@@ -1,4 +1,6 @@
 $(function(){
+  $('select, .shop__check').styler();
+  //presmerovani pomoci selectu
     // tabs team
   $('.aside__tabbox .aside__tab').on('click', function (event) {
    var id = $(this).attr('data-id');
@@ -55,3 +57,28 @@ menuBtn.addEventListener('click', () => {
     menuOpen = false;
   }
 });
+
+const counter = function () {
+  const btns = document.querySelectorAll('.counter__btn');
+
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const direction = this.dataset.direction;
+      const inp = this.parentElement.querySelector('.counter__value');
+      const currentValue = +inp.value;
+      let newValue;
+
+      if (direction === 'plus') {
+        newValue = currentValue + 1;
+      } else {
+        newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+      }
+
+      inp.value = newValue;
+    })
+  })
+
+}
+
+counter();

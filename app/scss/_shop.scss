@@ -1,0 +1,375 @@
+/// shop
+.shop {
+   .main__content {
+     margin-top: 41px;
+     h1{
+        color: $blue;
+     }
+   }
+ }
+ 
+ .shop__input {
+   margin-bottom: 16px;
+   label {
+     font-size: 12px;
+     line-height: 18px;
+     color: #878d96;
+     font-family: 'Inter', sans-serif;
+     font-weight: 700;
+     text-transform: uppercase;
+   }
+   input {
+     display: block;
+     width: 100%;
+     height: 40px;
+     background-color: #f2f4f8;
+     margin-top: 8px;
+     box-shadow: 0 2px 6px 0 rgba(135, 141, 150, 0.2);
+     border: 1px solid #dde1e6;
+     border-radius: 2px;
+     padding: 0 16px;
+     font-family: 'Inter', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color: #121619;
+     &::placeholder {
+      font-family: 'Inter', sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       color: #121619;
+     }
+   }
+   .select__platba {
+     background-color: #f2f4f8;
+     font-family: 'Inter', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     display: block;
+     box-shadow: 0 2px 6px 0 rgba(135, 141, 150, 0.2);
+     border: 1px solid #dde1e6;
+     border-radius: 2px;
+     margin-top: 7px;
+     height: 40px;
+     .jq-selectbox__dropdown {
+       color: #121619;
+       top: 40px;
+       box-shadow: 0 2px 6px 0 rgba(135, 141, 150, 0.2);
+     }
+     .jq-selectbox__select-text {
+       text-transform: capitalize;
+       color: #121619;
+       &::after {
+         content: '';
+         width: 1px;
+         height: 39px;
+         background-color: #dde1e6;
+         right: 40px;
+         top: 0;
+         position: absolute;
+       }
+       &::before {
+          content: '';
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: cover;
+         transform: rotate(90deg);
+         height: 10px;
+         width: 7px;
+         top: 14px;
+         right: 16px;
+         background-image: url('../images/svg/chevron-black.svg');
+       }
+     }
+   }
+ }
+ .shop__checkbox {
+   margin-bottom: 16px;
+   label {
+     font-size: 12px;
+     font-family: 'Inter', sans-serif;
+     font-weight: 400;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+   }
+   .shop__check {
+     margin-right: 8px;
+     background-color: #f2f4f8;
+     box-shadow: 0 2px 6px 0 rgba(135, 141, 150, 0.2);
+     border: 1px solid #dde1e6;
+     border-radius: 2px;
+     height: 16px;
+     width: 16px;
+     &.checked {
+       background-color: $blue;
+       .jq-checkbox__div {
+         margin: 3px auto 0;
+         width: 8px;
+         height: 8px;
+         background-image: url('../images/svg/check-solid.svg');
+       }
+     }
+     &.focused {
+       border: 1px solid $blue;
+     }
+   }
+ }
+ .objednat {
+   text-transform: uppercase;
+   font-family: 'Red Hat Display', sans-serif;
+   font-weight: 700;
+   font-size: 16px;
+   color: #fff;
+   border: none;
+   border-radius: 2px;
+   width: 100%;
+   height: 40px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: $blue;
+ }
+ .shop__form {
+   margin-bottom: 32px;
+ }
+ .cart {
+   .aside__title {
+     margin-bottom: 8px;
+   }
+   p {
+     text-transform: uppercase;
+     font-size: 12px;
+     color: #878d96;
+     margin-bottom: 3px;
+   }
+   div {
+     font-size: 20px;
+     line-height: 28px;
+     color: #121619;
+     font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+   }
+   &__row {
+     border-bottom: 1px solid #dde1e6;
+     padding-left: 16px;
+     padding: 4px 16px 8px;
+     &:last-child {
+       border-bottom: none;
+       margin-bottom: 8px;
+     }
+   }
+   .cart__cena {
+     font-size: 32px;
+     line-height: 40px;
+   }
+ }
+ .smazat {
+   width: 100%;
+   height: 40px;
+   cursor: pointer;
+  background-color: $red;
+   border-radius: 2px;
+   border: none;
+   color: #fff;
+   margin-top: 8px;
+ }
+ 
+ // shop inner
+ .shop__inner {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: -40px;
+   margin-top: 32px;
+ }
+ .shop__box {
+   flex: 0 0 33.3333%;
+   margin-bottom: 40px;
+ }
+ .shop__product {
+   padding-left: 40px;
+ }
+ .shop__top {
+   margin-bottom: 15px;
+   width: 100%;
+   &-img {
+     width: 100%;
+     height: 259px;
+     margin-bottom: 7px;
+     max-width: 100%;
+     img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       display: block;
+     }
+   }
+ 
+   h2 {
+     font-size: 20px;
+     line-height: 28px;
+     color: $blue;
+   }
+   p {
+     margin-bottom: 0;
+     font-size: 16px;
+     line-height: 28px;
+     color: #878d96;
+   }
+ }
+ 
+ .product__input {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 16px;
+   align-items: center;
+   border-top: 1px solid #dde1e6;
+   border-bottom: 1px solid #dde1e6;
+   .counter__btn {
+     width: 0;
+     border: none;
+     outline: none;
+     background-color: transparent;
+     width: 16px;
+     height: 16px;
+     display: block;
+     padding: 0;
+     margin: 0;
+     cursor: pointer;
+     img {
+       display: block;
+       width: 100%;
+       height: 100%;
+     }
+   }
+   .counter__value {
+     max-width: 60px;
+     text-align: center;
+     border: none;
+     height: 28px;
+     font-size: 20px;
+     line-height: 28px;
+   }
+ }
+ .product__form {
+   .velikost {
+     margin-bottom: 9px;
+     background-color: #f2f4f8;
+     font-family: 'Inter', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     display: block;
+     box-shadow: 0 2px 6px 0 rgba(135, 141, 150, 0.2);
+     border: 1px solid #dde1e6;
+     border-radius: 2px;
+     margin-top: 7px;
+     height: 40px;
+     .jq-selectbox__dropdown {
+       color: #121619;
+       top: 40px;
+       box-shadow: 0 2px 6px 0 rgba(135, 141, 150, 0.2);
+     }
+     .jq-selectbox__select-text {
+       text-transform: capitalize;
+       color: #121619;
+       &::after {
+         content: '';
+         width: 1px;
+         height: 39px;
+         background-color: #dde1e6;
+         right: 40px;
+         top: 0;
+         position: absolute;
+       }
+       &::before {
+          content: '';
+          position: absolute;
+         transform: rotate(90deg);
+         height: 10px;
+         width: 7px;
+         top: 14px;
+         right: 16px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-image: url('../images/svg/chevron-black.svg');
+       }
+     }
+   }
+ }
+
+ .jq-selectbox__select-text{
+   width: 100% !important;
+   font-size: 16px;
+   padding: 11px 15px;
+   position: relative;
+   cursor: pointer;
+ }
+ .jq-selectbox__dropdown{
+   background-color: #fff;
+   border-radius: 0 0 4px 4px;
+   text-align: center;
+   width: 100% !important;
+   left: 0;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+ .jq-select-multiple li, .jq-selectbox li{
+   font-size: 16px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin-left: 15px;
+   text-align: left;
+   font-family: 'Inter', sans-serif;
+   font-weight: 400;
+   padding: 8px 10px;
+   cursor: pointer;
+   transition: all .2s;
+   &:hover{
+      background-color: $red;
+      color: #fff;
+   }
+ }
+
+ @media(max-width:1240px){
+   .main.shop {
+      .main__inner{
+         flex-direction: column;
+         align-items: center;
+      }
+      .aside{
+         display: block;
+         max-width: 600px;
+      }
+      .main__content {
+        max-width: 896px;
+      }
+    }
+ }
+ @media(max-width:800px){
+   .shop__inner {
+      margin-left: -20px;
+    }
+    .shop__product {
+      padding-left: 20px;
+    }
+    .shop__box {
+      flex: 0 50%;
+    }
+ }
+ @media(max-width:480px){
+   .shop__product {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .shop__inner {
+      margin-left: 0;
+    }
+    .shop__box {
+      flex: 100%;
+    }
+    .clanek__box img {
+      height: 260px;
+    }
+ }
