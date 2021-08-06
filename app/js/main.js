@@ -1,4 +1,16 @@
 $(function(){
+    //tabs
+    $('.statistiky__active .statistiky__tab').on('click', function (event) {
+      var id = $(this).attr('data-id');
+      $('.statistiky__active').find('.statistiky__content').removeClass('tab-active').hide();
+      $('.statistiky__active .statistiky__tabs').find('.statistiky__tab').removeClass('active');
+      $(this).addClass('active');
+      $('#' + id)
+        .addClass('tab-active')
+        .fadeIn();
+      return false;
+    });
+  
   $('select, .shop__check').styler();
   //presmerovani pomoci selectu
     // tabs team
