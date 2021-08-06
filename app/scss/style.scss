@@ -633,28 +633,36 @@ tr{
    padding-top: 48px;
    margin-bottom: 108px;
    &__top{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-gap: 32px;
+    
+      display: flex;
+      align-items: center;
       margin-bottom: 32px;
+      justify-content: space-between;
       a{
+         padding: 0 10px;
+         flex: 0 0 20%;
+         max-width: 20%;
          height: 211px;
          display: block;
          background-repeat: no-repeat;
-         background-size: cover;
+         background-size: contain;
+         background-position: center center;
       }
    }
    &__bottom{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-gap: 32px;
+     display: flex;
+     align-items: center;
+      justify-content: space-between;
+      width: 100%;
       a{
+         flex: 0 0 15%;
+         max-width: 15%;
+         padding: 0 10px;
          height: 133px;
          display: block;
          background-repeat: no-repeat;
-         background-size: cover;
+         background-size: contain;
+         background-position: center center;
       }
    }
 }
@@ -666,31 +674,37 @@ tr{
       height: 110px;
    }
 }
-@media(max-width:1040px){
+@media(max-width:1120px){
    .partners__top{
-      grid-template-columns: 1fr 1fr;
+      flex-wrap: wrap;
    }
    .partners__top a{
       height: 211px;
+      max-width: 40%;
+      flex: 0 0 40%;
    }
    .partners__bottom{
-      grid-template-columns: 1fr 1fr 1fr;
+     flex-wrap: wrap;
    }
    .partners__bottom a{
       height: 133px;
+      max-width: 33%;
+      flex: 0 0 33%;
+      margin-bottom: 32px;
    }
 }
-@media(max-width:580px){
-   .partners__bottom{
-      grid-template-columns: 1fr 1fr;
-   }
+@media(max-width:770px){
+  
    .partners__top a{
       height: 133px;
    }
    .partners__bottom,
    .partners__top{
       margin-bottom: 15px;
-      grid-gap: 15px;
+      a{
+         max-width: 45%;
+         flex: 0 0 45%;
+      }
    }
 }
 // partners end -----------
