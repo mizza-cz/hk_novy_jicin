@@ -74,42 +74,30 @@
  }
  .statistiky__content {
    display: none;
+   .soupiska-page{
+    h3{
+      color: #002469;
+      padding-left: 17px;
+      position: relative;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      &::before{
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 6px;
+         width: 1px;
+         height: 11px;
+         background-color: #e53a24;
+      }
+   }
+   }
  }
  .statistiky__content.tab-active {
    display: block;
  }
  
- .real-tabl__inner {
-   table {
-     border-collapse: collapse;
-     width: 100%;
-     max-width: 896px;
-     tr th {
-       font-family: 'Barlow', sans-serif;
-       background: #eceff1;
-       font-size: 16px;
-       line-height: 1.57;
-       font-weight: 600;
-       text-align-last: left;
-       color: #05090c;
-       border-bottom: 1px solid #eceff1;
-       &:first-child {
-         padding: 8px 0 8px 16px;
-       }
-     }
-     tr td {
-       border-bottom: 1px solid #eceff1;
-       text-align: left;
-       font-size: 14px;
-       padding: 12px 4px;
-       font-weight: 400;
-       font-family: 'Barlow', sans-serif;
-       &:first-child {
-         padding: 8px 0 8px 16px;
-       }
-     }
-   }
- }
+
  .soupiska-table {
    table {
      border-collapse: collapse;
@@ -151,6 +139,78 @@
      tr td.name,
      tr th.name {
        text-align: left;
+     }
+   }
+ }
+ .rozcestnik{
+   .main__content{
+     margin-top: 50px;
+     h1{
+       margin-bottom: 32px;
+       color: $blue;
+     }
+   }
+   .statistiky__content{
+     h1{
+       margin-bottom: 0;
+     }
+   }
+   .statistiky__tabs{
+     flex-wrap: wrap;
+   }
+   .statistiky__tab{
+     border: none;
+     padding: 0;
+     &.active{
+       background-color: transparent;
+       a{
+        color: $red;
+       }
+     }
+   }
+ }
+ .real-tabl__inner{
+   table{
+    tr th:first-child, tr th:nth-of-type(2), tr td:first-child, tr td:nth-of-type(2){
+      text-align: left;
+    }
+    tr th:first-child{
+      width: auto;
+    }
+    td a{
+      color: #000;
+    }
+   }
+ }
+ @media(max-width:1240px){
+   .rozcestnik{
+     .main__content{
+       max-width: 800px;
+       margin: 50px auto 0;
+     }
+   }
+ }
+ @media(max-width:680px){
+  .rozcestnik{
+    .main__inner{
+      display: block;
+    }
+  }
+
+ }
+ @media(max-width:520px){
+  .real-tabl__inner{
+    overflow-x: auto;
+    table{
+      width: 500px;
+      max-width: initial;
+    }
+  }
+ }
+ @media(max-width:410px){
+   .rozcestnik{
+     .statistiky__tabs{
+       padding-left: 0;
      }
    }
  }
